@@ -8,5 +8,5 @@ class RFC(Base):
     rfc = sa.Column(sa.String(250), nullable=False, primary_key=True)
     summary = sa.Column(sa.String, nullable=False)
     description = sa.Column(sa.String, nullable=False)
-    created_on = sa.Column(sa.TIMESTAMP, nullable=False, default=datetime.now())
+    created_on = sa.Column(sa.TIMESTAMP, nullable=False, default=datetime.now(), onupdate=datetime.now())
     sa.UniqueConstraint(rfc, name='unique_rfc')

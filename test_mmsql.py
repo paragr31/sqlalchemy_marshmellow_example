@@ -8,6 +8,7 @@ rfc_schema = RFCSchema()
 data = {
     'rfc': 'RFC23453',
     'summary': 'Test marshmellow',
+    'description': 'Test Description'
 }
 validation = rfc_schema.validate(data, session=Session)
 if not validation:
